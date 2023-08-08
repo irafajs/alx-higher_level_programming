@@ -1,3 +1,6 @@
 #!/usr/bin/python3
+l_case = 'a'
+a = ""
 for l_case in range(97, 123):
-    print(chr(l_case), end="")
+    a += "{}".format(chr(l_case))
+print(a, end="")
