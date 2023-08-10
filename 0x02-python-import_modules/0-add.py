@@ -1,6 +1,13 @@
 #!/usr/bin/python
-from add_0 import add
-c = 1
-d = 2
-gut = add(c, d)
-print("{:d} + {:d} = {:d}".format(c, d, gut))
+import add_0
+
+
+def main():
+    a = 1
+    b = 2
+    gut = add_0.add(a, b)
+    print("{:d} + {:d} = {:d}".format(a, b, gut))
+
+
+if __name__ == "__main__":
+    main()
