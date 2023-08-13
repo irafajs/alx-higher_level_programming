@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
 /**
  * is_palindrome - check if function is a palindrome
  * @head: passed argument as a double pointer
@@ -30,9 +27,7 @@ int is_palindrome(listint_t **head)
 		gake = idaho;
 	}
 	if (cyane != NULL)
-	{
 		gake = gake->next;
-	}
 	while (haba != NULL && gake != NULL)
 	{
 		if (haba->n !=  gake->n)
