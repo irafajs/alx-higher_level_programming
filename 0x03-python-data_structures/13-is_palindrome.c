@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+/**
+ * is_palindrome - check if function is a palindrome
+ * @head: passed argument as a double pointer
+ *
+ * Return: 0 at success
+ */
 
 int is_palindrome(listint_t **head)
 {
@@ -9,11 +15,10 @@ int is_palindrome(listint_t **head)
 	listint_t *cyane = *head;
 	listint_t *haba = NULL;
 	listint_t *idaho = NULL;
-	/*listint_t *igi_cyambere = *head;*/
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
-		return (1);
+		return (0);
 	}
 	while (cyane != NULL && cyane->next != NULL)
 	{
@@ -35,6 +40,5 @@ int is_palindrome(listint_t **head)
 		haba = haba->next;
 		gake = gake->next;
 	}
-	return(1);
+	return (0);
 }
-
