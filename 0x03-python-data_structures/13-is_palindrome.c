@@ -1,50 +1,43 @@
 #include "lists.h"
+
 /**
- * is_palindrome - check if function is a palindrome
+ * is_palindrome - check if the list is palindrome
  * @head: passed argument as a double pointer
  *
- * Return: 0 at success
+ * Return: 1 at success
  */
-
 int is_palindrome(listint_t **head)
 {
-	listint_t *gake = *head;
-	listint_t *cyane = *head;
+	listint_t *gacye = *head;
+	listint_t *vuba = *head;
 	listint_t *haba = NULL;
-	listint_t *idaho = NULL;
-	listint_t *none = haba;
-	listint_t *igi_rimwe = *head;
+	listint_t *idaho;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
 		return (1);
 	}
-	while (cyane != NULL && cyane->next != NULL)
+	while (vuba != NULL && vuba->next != NULL)
 	{
-		cyane = cyane->next->next;
-		idaho = gake->next;
-		haba = gake;
-		gake = idaho;
+		vuba = vuba->next->next;
+		idaho = gacye->next;
+		gacye->next = haba;
+		haba = gacye;
+		gacye = idaho;
 	}
-	if (cyane != NULL)
-		gake = gake->next;
-	while (haba != NULL && gake != NULL)
+	if (vuba != NULL)
 	{
-		if (haba->n !=  gake->n)
+		gacye = gacye->next;
+	}
+	while (haba != NULL && gacye != NULL)
+	{
+		if (haba->n != gacye->n)
 		{
 			return (0);
 		}
 		haba = haba->next;
-		gake = gake->next;
+		gacye = gacye->next;
 	}
-	haba = NULL;
-	while (none != NULL)
-	{
-		haba = none->next;
-		none->next = haba;
-		haba = none;
-		none = haba;
-	}
-	igi_rimwe->next = haba;
 	return (1);
 }
+
