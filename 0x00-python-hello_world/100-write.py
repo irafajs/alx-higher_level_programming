@@ -2,6 +2,6 @@
 import sys
 
 
-sys.stdout.write('and that piece of art is useful - Dora Korpar, 2015-10-19')
-sys.stdout.write('\n')
+sys.stderr.write('and that piece of art is useful - Dora Korpar, 2015-10-19')
+sys.stderr.write('\n')
 exit(1)
