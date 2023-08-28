@@ -1,28 +1,30 @@
 def list_division(my_list_1, my_list_2, list_length):
-    result = []
+    results = []
+    error_messages = []
     try:
-        if len(my_list_1) > len(my_list_2):
-            list_length = len(my_list_1)
-        else:
-            list_length = len(my_list_2)
-        for item in range(list_length):
-            s_item1 = my_list_1[item] if item < len(my_list_1) else 0
-            s_item2 = my_list_2[item] if item < len(my_list_2) else 1
-            s_item1_isint = isinstance(s_item1, (int, float))
-            s_item2_isint = isinstance(s_item2, (int, float))
-            if not (s_item1_isint and s_item2_isint):
-                print("wrong type")
-                result.append(0)
+        for i in range(list_length):
+            elem1 = my_list_1[i] if i < len(my_list_1) else 0
+            elem2 = my_list_2[i] if i < len(my_list_2) else 1
+            c_int_el1 = isinstance(elem1, (int, float))
+            c_int_el2 = isinstance(elem2, (int, float))
+            if not (c_int_el1 and c_int_el2):
+                error_messages.append("wrong type")
+                results.append(0)
             else:
                 try:
-                    division_result = s_item1 / s_item2
-                    result.append(division_result)
+                    division_result = elem1 / elem2
+                    if division_result == 0:
+                        results.append(0)
+                    else:
+                        results.append(division_result)
                 except ZeroDivisionError:
-                    print("division by 0")
-                    result.append(0)
+                    error_messages.append("division by 0")
+                    results.append(0)
     except IndexError:
         pass
     finally:
-        if len(result) > len(my_list_1) or len(result) > len(my_list_2):
-            print("out of range")
-        return result
+        if len(my_list_1) < list_length or len(my_list_2) < list_length:
+            error_messages.append("out of range")
+        for error in error_messages:
+            print(error)
+        return results
