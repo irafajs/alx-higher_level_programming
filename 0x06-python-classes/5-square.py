@@ -41,4 +41,3 @@ class Square:
             for i in range(self.__size):
                 """print function to print a square of # symbol"""
                 print("#" * self.__size)
-
