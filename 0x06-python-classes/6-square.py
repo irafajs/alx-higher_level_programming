@@ -28,7 +28,6 @@ class Square:
         else:
             """initialize __size to value"""
             self.__size = value
-    
     """defines a function called position"""
     @property
     def position(self):
@@ -68,4 +67,3 @@ class Square:
             for _ in range(self.__size):
                 """print the expected outpu"""
                 print("_" * self.__position[0] + "#" * self.__size)
-
