@@ -3,6 +3,7 @@
 
 
 class Rectangle:
+    """initialize attributes to 0"""
     number_of_instances = 0
     """defines function named __init__"""
     def __init__(self, width=0, height=0):
