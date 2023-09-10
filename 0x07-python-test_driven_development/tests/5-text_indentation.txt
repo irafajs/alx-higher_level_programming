@@ -1,0 +1,33 @@
+# 5-text_indentation.txt
+
+=================================
+how to use 5-text_indentation.py
+=================================
+we only have one function ``text_indentation()``.
+
+Strings
+=======
+``text_indentation`` indent by printing to new line
+
+::
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("""Lorem ipsum. dolor sit amet? consectetur: adipiscing elit""")
+Lorem ipsum.
+<BLANKLINE>
+dolor sit amet?
+<BLANKLINE>
+consectetur:
+<BLANKLINE>
+adipiscing elit
+
+Not strings
+===========
+
+``text_indentation()`` when passed non string it will raise TypeError
+
+::
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
