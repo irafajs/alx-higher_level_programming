@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """doc"""
+
+
 def add_integer(a, b=98):
     """addidtion function"""
     if not isinstance(a, (int, float)):
