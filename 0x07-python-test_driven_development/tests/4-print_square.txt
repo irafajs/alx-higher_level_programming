@@ -1,0 +1,47 @@
+# 4-print_square.txt
+
+============================
+how to use 4-print_square.py
+============================
+
+we onlu have one function ``print_square()``
+
+Number
+======
+``print_square()`` only calculate square of a given number
+
+::
+>>> print_square = __import__('4-print_square').print_square
+
+>>> print_square(4)
+####
+####
+####
+####
+>>> print_square(10)
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+##########
+>>> print_square(0)
+
+>>> print_square(1)
+#
+
+Non-Numbers
+===========
+
+``print_square()`` if a parameter passed is not not number it will 
+throw an error.
+
+::
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
