@@ -7,4 +7,4 @@ def say_my_name(first_name, last_name=""):
     elif not first_name and not last_name:
         raise TypeError("function must have one argument")
     else:
-        print("my name is {} {}".format(first_name, last_name))
+        print("My name is {} {}".format(first_name, last_name))
