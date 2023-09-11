@@ -20,3 +20,11 @@ class TestMaxInteger(unittest.TestCase):
     def test_max_integer_1element(self):
         """method to test max int when list has one element"""
         self.assertEqual(max_integer([10]), 10)
+
+    def test_max_integer_atbegin(self):
+        """method to test max int when max int is at the beginning"""
+        self.assertEqual(max_integer([110, 2, 3, 4, -100, 10.7]), 110)
+
+    def test_max_integer_inmid(self):
+        """method to test max int when max int is in the middle"""
+        self.assertEqual(max_integer([1, 2, 3, 300, 4, -100, 10.7]), 300)
