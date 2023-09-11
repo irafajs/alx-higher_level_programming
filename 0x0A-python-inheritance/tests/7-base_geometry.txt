@@ -1,0 +1,34 @@
+# 7-base_geometry.txt
+
+=============================
+how to use 7-base_geometry.py
+=============================
+function ``integer_validator`` validate if it int
+
+Numbers
+=======
+
+``integer_validator``check if value passed to it is an int
+if it is not it raises an error depending on the error type
+
+::
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("my_int", 12)
+
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+...
+TypeError: <name> must be an integer
+>>> bg.integer_validator("name", 0)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
