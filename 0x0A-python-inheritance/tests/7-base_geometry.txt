@@ -23,12 +23,12 @@ if it is not it raises an error depending on the error type
 >>> bg.integer_validator("name", "John")
 Traceback (most recent call last):
 ...
-TypeError: <name> must be an integer
+TypeError: name must be an integer
 >>> bg.integer_validator("name", 0)
 Traceback (most recent call last):
 ...
-ValueError: <name> must be greater than 0
+ValueError: name must be greater than 0
 >>> bg.integer_validator("distance", -4)
 Traceback (most recent call last):
 ...
-ValueError: <name> must be greater than 0
+ValueError: distance must be greater than 0
