@@ -1,6 +1,11 @@
+#!/usr/bin/python3
+"""
+Shebang to create python script
+"""
+
+
 class Student:
     """Class representing a student."""
-
     def __init__(self, first_name, last_name, age):
         """Initialize a student with first_name, last_name, and age."""
         self.first_name = first_name

@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+Shebang to create a python script
+"""
+
+
 class Student:
     """Class representing a student."""
     def __init__(self, first_name, last_name, age):
@@ -20,4 +26,3 @@ class Student:
                 if hasattr(self, attr):
                     json_dict[attr] = getattr(self, attr)
             return json_dict
-
