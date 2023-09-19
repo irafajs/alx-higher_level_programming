@@ -47,3 +47,10 @@ class Square(Rectangle):
                 "size": self.size,
                 "y": self.y
                 }
+
+    @classmethod
+    def create(cls, **kwargs):
+        """method to create a new square"""
+        new_square = cls(1, 0, 0)
+        new_square.update(**kwargs)
+        return new_square
