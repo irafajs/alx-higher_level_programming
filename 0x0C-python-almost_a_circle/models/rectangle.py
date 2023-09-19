@@ -116,3 +116,10 @@ class Rectangle(Base):
                 "height": self.height,
                 "width": self.width
                 }
+
+    @classmethod
+    def create(cls, **kwargs):
+        """create a metjod to create new rectangle with create keyword"""
+        new_rect = cls(1, 1)
+        new_rect.update(**kwargs)
+        return new_rect
