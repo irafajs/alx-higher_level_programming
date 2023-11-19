@@ -17,11 +17,13 @@ if __name__ == "__main__":
     cursor = db.cursor()
     query = (
             "SELECT  c.name FROM cities c JOIN states s "
-            "ON c.state_id = s.id WHERE s.name LIKE BINARY %s;")
+            "ON c.state_id = s.id WHERE s.name LIKE BINARY %s ORDER BY c.id;")
     cursor.execute(query, (value,))
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    for i in range(len(rows) - 1):
+        print(rows[i][0], end=", ")
+    if rows:
+        print(rows[-1][0])
 
     cursor.close()
     db.close()
