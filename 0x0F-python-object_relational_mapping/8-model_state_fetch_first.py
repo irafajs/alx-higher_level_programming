@@ -21,5 +21,5 @@ if __name__ == "__main__":
     if (f_states):
         print("{}: {}".format(f_states.id, f_states.name))
     else:
-        print()
+        print("Nothing")
     session.close()
