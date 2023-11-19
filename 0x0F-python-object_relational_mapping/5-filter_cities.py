@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cursor = db.cursor()
     query = (
             "SELECT  c.name FROM cities c JOIN states s "
-            "ON c.state_id = s.id WHERE s.name = %s;")
+            "ON c.state_id = s.id WHERE s.name LIKE BINARY %s;")
     cursor.execute(query, (value,))
     rows = cursor.fetchall()
     for row in rows:
