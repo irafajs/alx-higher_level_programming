@@ -20,10 +20,10 @@ if __name__ == "__main__":
             "ON c.state_id = s.id WHERE s.name LIKE BINARY %s ORDER BY c.id;")
     cursor.execute(query, (value,))
     rows = cursor.fetchall()
-    for i in range(len(rows) - 1):
-        print(rows[i][0], end=", ")
-    if rows:
-        print(rows[-1][0])
-
+    if not rows:
+        print()
+    else:
+        city_names = [row[0] for row in rows]
+        print(", ".join(city_names))
     cursor.close()
     db.close()
