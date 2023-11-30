@@ -1,3 +1,3 @@
 #!/bin/bash
-#bash to count size of the reponse of a request send
+#bash to send a delete request
 curl -s -X DELETE "$1"

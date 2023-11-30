@@ -1,3 +1,3 @@
 #!/bin/bash
-#bash to count size of the reponse of a request send
+#bash to diplay the body of the reponse
 curl -sL "$1"
