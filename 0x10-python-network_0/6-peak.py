@@ -5,13 +5,13 @@ Shebang to make PY script
 
 
 def find_peak(list_of_integers):
-    list_sz = len(list_of_integers)
-    if list_sz == 0:
+    if not list_of_integers:
         return None
-    bigger = list_of_integers[0]
-    for count in range(list_sz - 1):
-        if list_of_integers[count] > list_of_integers[count + 1]:
-            bigger = list_of_integers[count]
+    small, big = 0, len(list_of_integers) - 1
+    while small < big:
+        mid = (small + big) // 2
+        if list_of_integers[mid] > list_of_integers[mid + 1]:
+            big = mid
         else:
-            bigger = list_of_integers[count + 1]
-    return bigger
+            small = mid + 1
+    return list_of_integers[small]
