@@ -7,7 +7,7 @@ Shebang to make PY script
 if __name__ == '__main__':
     import requests
     import sys
-    
+
     if len(sys.argv) != 3:
         sys.exit(1)
 
