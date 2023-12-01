@@ -16,4 +16,4 @@ if __name__ == '__main__':
         headers = response.info()
         if 'X-Request-Id' in headers:
             x_request_id = headers['X-Request-Id']
-            print("X-Request-Id:", x_request_id)
+            print(x_request_id)
